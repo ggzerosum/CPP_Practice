@@ -45,9 +45,11 @@ void main(void)
 			break;
 
 		case deposit:
+			fnc_deposit(pList, iSize);
 			break;
 
 		case withdraw:
+			fnc_withdraw(pList, iSize);
 			break;
 
 		case total:
@@ -60,6 +62,11 @@ void main(void)
 		}
 	}
 
-	//힙 영역 전체 해제.
-	//세부 이름 영역도 해제해야 함.
+	//힙 영역 속 메모리 공간 전체 해제
+	for (int i = 0; i < iSize; i++)
+	{
+		free(pList[i].name);
+	}
+
+	free(pList);
 }

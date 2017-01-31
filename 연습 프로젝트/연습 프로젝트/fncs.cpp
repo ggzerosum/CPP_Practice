@@ -76,17 +76,70 @@ void hana_bank::fnc_create(LIST** ppList, int* pSize)
 	}
 }
 
-void hana_bank::fnc_deposit(LIST*)
+void hana_bank::fnc_deposit(LIST* pList, const int iSize)
 {
+	using std::cout;
+	using std::cin;
+	using std::endl;
 
+	int iInput_id, iInput_cash;
+
+	cout << "1. 입금할 계좌번호" << endl << ": ";
+	cin >> iInput_id;
+
+	cout << endl << "2. 입금할 금액" << endl << ": ";
+	cin >> iInput_cash;
+
+	for (int i = 0; i < iSize; i++)
+	{
+		if (pList[i].id == iInput_id)
+		{
+			pList[i].cash += iInput_cash;
+			cout << endl << "입금이 완료되었습니다.";
+			cout << endl << "현재 잔액: " << pList[i].cash;
+			cout << endl;
+			return;
+		}
+	}
+
+	cout << endl << "유효하지 않은 ID입니다." << endl;
 }
 
-void hana_bank::fnc_withdraw(LIST*)
+void hana_bank::fnc_withdraw(LIST* pList, const int iSize)
 {
+	using std::cout;
+	using std::cin;
+	using std::endl;
 
+	int iInput_id, iInput_cash;
+
+	cout << "1. 출금할 계좌번호" << endl << ": ";
+	cin >> iInput_id;
+
+	cout << endl << "2. 출금할 금액" << endl << ": ";
+	cin >> iInput_cash;
+
+	for (int i = 0; i < iSize; i++)
+	{
+		if (pList[i].id == iInput_id)
+		{
+			if (pList[i].cash < iInput_cash)
+			{
+				cout << endl << "계좌의 잔액보다 큰 액수는 출금할 수 없습니다." << endl;
+				cout << "현재 잔액: " << pList[i].cash << endl;
+				return;
+			}
+
+			pList[i].cash -= iInput_cash;
+			cout << endl << "현재 계좌 잔액: " << pList[i].cash << "원" << endl;
+			return;
+		}
+	}
+
+	cout << endl << "유효하지 않은 ID입니다" << endl;
 }
 
-void hana_bank::fnc_total(LIST* pList, int iSize)
+void hana_bank::fnc_total(LIST* pList, const int iSize)
 {
 	using std::cout;
 	using std::endl;

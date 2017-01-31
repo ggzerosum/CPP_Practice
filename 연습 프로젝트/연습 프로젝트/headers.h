@@ -12,9 +12,9 @@ namespace hana_bank
 	}LIST;
 
 	void fnc_create(LIST** = NULL, int* = NULL);
-	void fnc_deposit(LIST* = NULL);
-	void fnc_withdraw(LIST* = NULL);
-	void fnc_total(LIST* = NULL, int = 0);
+	void fnc_deposit(LIST* = NULL, const int = 0);
+	void fnc_withdraw(LIST* = NULL, const int = 0);
+	void fnc_total(LIST* = NULL, const int = 0);
 
 	void fnc_flush(void);
 }
