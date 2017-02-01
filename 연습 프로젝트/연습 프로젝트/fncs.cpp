@@ -3,7 +3,7 @@
 #include <cstring>
 #include "headers.h"
 
-void hana_bank::fnc_create(LIST** ppList, int* pSize)
+void hana_bank::fnc_create(LIST* &pList, int* pSize)
 {
 	using std::cout;
 	using std::endl;
@@ -27,23 +27,23 @@ void hana_bank::fnc_create(LIST** ppList, int* pSize)
 	fnc_flush();
 	cin >> iInput_cash;
 
-	if (*ppList == NULL)
+	if (pList == NULL)
 	{
 		//0에 1 더한 크기로 동적 할당
 		(*pSize)++;
 		temp_size = sizeof(LIST)*(*pSize);
-		*ppList = (LIST*)malloc(temp_size);
+		pList = (LIST*)malloc(temp_size);
 
 		//이름 텍스트 크기만큼 동적할당
 		temp_size = sizeof(char)*(strlen(sInput_name) + 1);
-		(*ppList)->name = (char*)malloc(temp_size);
+		pList->name = (char*)malloc(temp_size);
 		
 		//이름용 동적할당 공간에 텍스트 복사
-		strcpy_s((*ppList)->name, temp_size, sInput_name);
+		strcpy_s(pList->name, temp_size, sInput_name);
 		
 		//계좌, 잔액 값 대입
-		(*ppList)->id = iInput_id;
-		(*ppList)->cash = iInput_cash;
+		pList->id = iInput_id;
+		pList->cash = iInput_cash;
 	}
 	else
 	{
@@ -54,7 +54,7 @@ void hana_bank::fnc_create(LIST** ppList, int* pSize)
 		//신규 구조체에 기존 구조체의 값 복사
 		for (int i = 0; i < (*pSize); i++)
 		{
-			pTemp[i] = (*ppList)[i];
+			pTemp[i] = pList[i];
 		}
 
 		//신규 구조체 배열의 마지막 요소 관리
@@ -68,10 +68,10 @@ void hana_bank::fnc_create(LIST** ppList, int* pSize)
 		pTemp[*pSize].cash = iInput_cash;
 
 		//기존 동적 할당 해제
-		free(*ppList);
+		free(pList);
 		
 		//주소값 대입, 크기 증가
-		*ppList = pTemp;
+		pList = pTemp;
 		++(*pSize);
 	}
 }

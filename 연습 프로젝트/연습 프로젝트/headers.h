@@ -11,7 +11,7 @@ namespace hana_bank
 		int cash;
 	}LIST;
 
-	void fnc_create(LIST** = NULL, int* = NULL);
+	void fnc_create(LIST* &, int* = NULL);
 	void fnc_deposit(LIST* = NULL, const int = 0);
 	void fnc_withdraw(LIST* = NULL, const int = 0);
 	void fnc_total(LIST* = NULL, const int = 0);

@@ -41,7 +41,7 @@ void main(void)
 		switch (iInput)
 		{
 		case create:
-			fnc_create(&pList, &iSize);
+			fnc_create(pList, &iSize);
 			break;
 
 		case deposit:
