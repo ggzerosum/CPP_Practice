@@ -10,9 +10,10 @@ void main(void)
 	using namespace hana_bank;
 
 	int iInput;
-	LIST* pList = NULL;
-	int iSize = 0;
-	int key = 1;
+	bool key = true;
+
+	bank* HansBank = new bank;
+	HansBank->Init();
 
 	enum
 	{
@@ -41,32 +42,30 @@ void main(void)
 		switch (iInput)
 		{
 		case create:
-			fnc_create(pList, &iSize);
+			HansBank->CreateList();
 			break;
 
 		case deposit:
-			fnc_deposit(pList, iSize);
+			HansBank->Deposit();
 			break;
 
 		case withdraw:
-			fnc_withdraw(pList, iSize);
+			HansBank->Withdraw();
 			break;
 
 		case total:
-			fnc_total(pList, iSize);
+			HansBank->ShowList();
 			break;
 
 		default:
-			key = 0;
+			key = false;
 			break;
 		}
 	}
 
-	//힙 영역 속 메모리 공간 전체 해제
-	for (int i = 0; i < iSize; i++)
-	{
-		free(pList[i].name);
-	}
+	//힙영역 속 할당 공간 전체 해제
+	HansBank->DeleteList();
 
-	free(pList);
+	//클래스 객체 해제
+	delete HansBank;
 }

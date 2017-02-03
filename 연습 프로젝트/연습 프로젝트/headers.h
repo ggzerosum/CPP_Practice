@@ -11,10 +11,19 @@ namespace hana_bank
 		int cash;
 	}LIST;
 
-	void fnc_create(LIST* &, int* = NULL);
-	void fnc_deposit(LIST* = NULL, const int = 0);
-	void fnc_withdraw(LIST* = NULL, const int = 0);
-	void fnc_total(LIST* = NULL, const int = 0);
+	class bank
+	{
+	private:
+		int m_iSize;
+		LIST* m_List;
+	public:
+		void Init(void);
+		void CreateList(void);
+		void Deposit(void);
+		void Withdraw(void);
+		void ShowList(void);
+		void DeleteList(void);
+	};
 
 	void fnc_flush(void);
 }
