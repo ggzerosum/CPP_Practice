@@ -6,9 +6,9 @@ namespace My_NameSpace
 	{
 	private:
 		int m_iNumber;
-		int m_iPrice;
+		const int m_iPrice;
 	public:
-		void Init(int num, int price);
+		APPLE(int num, int price);
 		int GetNum(void) const;
 		int GetPrice(void) const;
 		void SetNum(int num);

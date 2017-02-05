@@ -22,6 +22,7 @@
     <ProjectGuid>{37B97C83-239F-4256-93C9-43141889DF7C}</ProjectGuid>
     <RootNamespace>연습프로젝트</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>은행 계좌 관리 프로그램</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

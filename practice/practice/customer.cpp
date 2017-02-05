@@ -2,10 +2,10 @@
 
 namespace My_NameSpace
 {
-	void CUSTOMER::Init(void)
+	CUSTOMER::CUSTOMER(int money)
+		:m_iMoney(money), m_cApples(0, PriceOfApples)
 	{
-		m_cApples.Init(0, PriceOfApples);
-		m_iMoney = Customers_Init_Money;
+		//m_iMoney = money;
 	}
 
 	void CUSTOMER::BuyApples(SELLER &seller, int num)

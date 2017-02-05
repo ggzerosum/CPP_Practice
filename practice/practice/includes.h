@@ -4,8 +4,8 @@
 
 #define My_NameSpace Providence_HanSeungMin_2017_02_04
 #define Sellers_Init_NumOfApples 1000
-#define Sellers_Init_Money 10000000
-#define Customers_Init_Money 50000
+#define Sellers_Default_Money 10000000
+#define Customers_Default_Money 50000
 #define PriceOfApples 2000
 
 #include "apple.h"

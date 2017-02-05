@@ -8,7 +8,7 @@ namespace My_NameSpace
 		APPLE m_cApples;
 		int m_iMoney;
 	public:
-		void Init(void);
+		CUSTOMER(int money = Customers_Default_Money);
 		void BuyApples(SELLER &seller, int num);
 		void ShowState(void) const;
 	};

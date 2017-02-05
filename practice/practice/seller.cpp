@@ -2,10 +2,10 @@
 
 namespace My_NameSpace
 {
-	void SELLER::Init(void)
+	SELLER::SELLER(int money)
+		:m_iMoney(money), m_cApples(Sellers_Init_NumOfApples, PriceOfApples) // 선언과 초기화를 동시에.
 	{
-		m_cApples.Init(Sellers_Init_NumOfApples, PriceOfApples);
-		m_iMoney = Sellers_Init_Money;
+		//m_iMoney = money; //선언 후 초기화.
 	}
 
 	bool SELLER::SaleApples(int num)

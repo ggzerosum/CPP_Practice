@@ -2,13 +2,10 @@
 
 namespace My_NameSpace
 {
-	void APPLE::Init(int num, int price)
+	APPLE::APPLE(int num, int price)
+		:m_iNumber(num), m_iPrice(price)
 	{
-		if (num < 0) num = 0;
-		if (price < 0) price = 0;
-
-		m_iNumber = num;
-		m_iPrice = price;
+		//empty
 	}
 
 	int APPLE::GetNum(void) const
@@ -26,8 +23,10 @@ namespace My_NameSpace
 		m_iNumber = num;
 	}
 
+	/*
 	void APPLE::SetPrice(int price)
 	{
 		m_iPrice = price;
 	}
+	*/
 }

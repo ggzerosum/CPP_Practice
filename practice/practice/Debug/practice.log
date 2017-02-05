@@ -1,10 +1,4 @@
-﻿  apple.cpp
-  Generating Code...
-  Compiling...
-  seller.cpp
-  main.cpp
-  functions.cpp
-  customer.cpp
-  Generating Code...
-  practice.vcxproj -> C:\Users\ggzerosum\Desktop\C언어\C++ 연습\practice\Debug\practice.exe
-  practice.vcxproj -> C:\Users\ggzerosum\Desktop\C언어\C++ 연습\practice\Debug\practice.pdb (Partial PDB)
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(392,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (practice.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  apple.cpp
+  practice.vcxproj -> D:\Github\CPP_Practice\practice\Debug\Apple_Seller_Customer.exe
+  practice.vcxproj -> D:\Github\CPP_Practice\practice\Debug\Apple_Seller_Customer.pdb (Partial PDB)
