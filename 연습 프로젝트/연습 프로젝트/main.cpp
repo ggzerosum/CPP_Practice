@@ -1,6 +1,3 @@
-#include <iostream>
-#include <cstdlib>
-#include <Windows.h>
 #include "headers.h"
 
 void main(void)

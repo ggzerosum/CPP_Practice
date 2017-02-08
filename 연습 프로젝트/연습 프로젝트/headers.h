@@ -1,31 +1,14 @@
 #ifndef CHECK_HEADER
-
 #define CHECK_HEADER
 
-namespace hana_bank
-{
-	typedef struct account_list
-	{
-		int id;
-		char* name;
-		int cash;
-	}LIST;
+#include <iostream>
+#include <cstdlib>
+#include <cstring>
+#include <Windows.h>
 
-	class bank
-	{
-	private:
-		int m_iSize;
-		LIST* m_List;
-	public:
-		void Init(void);
-		void CreateList(void);
-		void Deposit(void);
-		void Withdraw(void);
-		void ShowList(void);
-		void DeleteList(void);
-	};
+#define My_NameSpace hana_bank
 
-	void fnc_flush(void);
-}
+#include "Account.h"
+#include "Bank.h"
 
 #endif

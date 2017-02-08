@@ -13,18 +13,36 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="클래스">
+      <UniqueIdentifier>{3387030c-d6cd-4334-a936-b8e9b13ead8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="클래스\1. Account">
+      <UniqueIdentifier>{d2f392ad-2cbf-48b6-8969-e13ad7e04530}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="클래스\2. Bank">
+      <UniqueIdentifier>{e4ffb96e-0c0d-4f3d-92ce-c26fdf055fbc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="fncs.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Account.cpp">
+      <Filter>클래스\1. Account</Filter>
+    </ClCompile>
+    <ClCompile Include="Bank.cpp">
+      <Filter>클래스\2. Bank</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers.h">
       <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Bank.h">
+      <Filter>클래스\2. Bank</Filter>
+    </ClInclude>
+    <ClInclude Include="Account.h">
+      <Filter>클래스\1. Account</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

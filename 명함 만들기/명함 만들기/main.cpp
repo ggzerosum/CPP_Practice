@@ -9,8 +9,6 @@ void main(void)
 	ns::NAMECARD manSenior("홍백희", "오렌지 엔지니어", "010-3330-4044", nsEnum::SENIOR);
 	ns::NAMECARD manAssist("송하나", "오버워치", "010-5555-6766", nsEnum::ASSIST);
 
-	manClerk.~NAMECARD();
-
 	manClerk.ShowNameCardInfo();
 	manSenior.ShowNameCardInfo();
 	manAssist.ShowNameCardInfo();
