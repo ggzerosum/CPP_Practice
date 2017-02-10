@@ -2,15 +2,19 @@
 
 namespace My_NameSpace
 {
-	class bank
+	class BANK
 	{
 	private:
 		int m_iSize;
 		ACCOUNT** m_List;
 		void fnc_flush(void);
 	public:
-		bank(void);
-		~bank(void);
+		//생성자
+		BANK(void);
+		//복사 생성자
+		BANK(const BANK &original);
+		//소멸자
+		~BANK(void);
 
 		void CreateList(void);
 		void Deposit(void);

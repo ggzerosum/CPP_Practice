@@ -4,13 +4,16 @@ void main(void)
 {
 	using std::cout;
 	using std::cin;
+	using std::endl;
 	using namespace hana_bank;
 
 	int iInput;
 	bool key = true;
 
-	bank* HansBank = new bank;
-	HansBank->Init();
+	//BANK* ptr = new BANK;
+	//BANK &HansBank = *ptr;
+
+	BANK HansBank;
 
 	enum
 	{
@@ -39,19 +42,19 @@ void main(void)
 		switch (iInput)
 		{
 		case create:
-			HansBank->CreateList();
+			HansBank.CreateList();
 			break;
 
 		case deposit:
-			HansBank->Deposit();
+			HansBank.Deposit();
 			break;
 
 		case withdraw:
-			HansBank->Withdraw();
+			HansBank.Withdraw();
 			break;
 
 		case total:
-			HansBank->ShowList();
+			HansBank.ShowList();
 			break;
 
 		default:
@@ -60,9 +63,10 @@ void main(void)
 		}
 	}
 
-	//힙영역 속 할당 공간 전체 해제
-	HansBank->DeleteList();
+	//은행 정보 복사
+	BANK AnotherBank = HansBank;
 
-	//클래스 객체 해제
-	delete HansBank;
+	//클래스 객체 해제(delete는 힙영역의 공간을 지우는 키워드. 다른 영역에 못쓴다.)
+	//delete &AnotherBank;
+	//delete &HansBank;
 }

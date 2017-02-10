@@ -8,11 +8,18 @@ namespace My_NameSpace
 		char* m_Name;
 		char* m_NameOfCompany;
 		char* m_Tel;
-		const int m_Rank;
+		int m_Rank;
 		void StrToMembersWithNew(char* &destination, const char* source);
 	public:
+		//생성자 기본
+		NAMECARD(void);
+		//생성자
 		NAMECARD(const char* name, const char* nameOfCompany, const char* tel, int rank);
+		//복사 생성자
+		NAMECARD(const NAMECARD &copy);
+		//소멸자
 		~NAMECARD(void);
+
 		void ShowNameCardInfo(void);
 	};
 }
