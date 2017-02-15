@@ -12,15 +12,90 @@
     <Filter Include="Classes">
       <UniqueIdentifier>{30c065dc-a80e-4123-8b90-383dacf22981}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes\City">
+      <UniqueIdentifier>{2142922c-d06b-4bc7-91c4-3e0d46a6931c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Resource">
+      <UniqueIdentifier>{13da43ea-7727-4cfc-860b-b2d61aa38c77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Trade">
+      <UniqueIdentifier>{e61028ac-c8b7-4ebd-9dd7-77335ecc5937}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Resource\IRON">
+      <UniqueIdentifier>{34d152b2-2a1e-4622-a798-c70476178b8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Resource\STONE">
+      <UniqueIdentifier>{e8250169-a81f-4e96-b700-338fcf1a3b4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Resource\WOOD">
+      <UniqueIdentifier>{433807d1-ae7d-4f1d-b0f4-d609987c8232}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Resource\RESOURCES">
+      <UniqueIdentifier>{83550209-ae6d-4e86-b0a3-b0e40bd9224c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\TownHall">
+      <UniqueIdentifier>{f39f0612-3d01-4cb1-9540-2a12ca97bab4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source</Filter>
     </ClCompile>
+    <ClCompile Include="CITY.cpp">
+      <Filter>Classes\City</Filter>
+    </ClCompile>
+    <ClCompile Include="TRADE.cpp">
+      <Filter>Classes\Trade</Filter>
+    </ClCompile>
+    <ClCompile Include="IRON.cpp">
+      <Filter>Classes\Resource\IRON</Filter>
+    </ClCompile>
+    <ClCompile Include="WOOD.cpp">
+      <Filter>Classes\Resource\WOOD</Filter>
+    </ClCompile>
+    <ClCompile Include="STONE.cpp">
+      <Filter>Classes\Resource\STONE</Filter>
+    </ClCompile>
+    <ClCompile Include="RESOURCES.cpp">
+      <Filter>Classes\Resource\RESOURCES</Filter>
+    </ClCompile>
+    <ClCompile Include="TownHall.cpp">
+      <Filter>Classes\TownHall</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="all_includes.h">
       <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="CITY.h">
+      <Filter>Classes\City</Filter>
+    </ClInclude>
+    <ClInclude Include="TRADE.h">
+      <Filter>Classes\Trade</Filter>
+    </ClInclude>
+    <ClInclude Include="all_objects.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="IRON.h">
+      <Filter>Classes\Resource\IRON</Filter>
+    </ClInclude>
+    <ClInclude Include="WOOD.h">
+      <Filter>Classes\Resource\WOOD</Filter>
+    </ClInclude>
+    <ClInclude Include="STONE.h">
+      <Filter>Classes\Resource\STONE</Filter>
+    </ClInclude>
+    <ClInclude Include="all_infos.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="RESOURCES.h">
+      <Filter>Classes\Resource\RESOURCES</Filter>
+    </ClInclude>
+    <ClInclude Include="Enums.h">
+      <Filter>Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="TownHall.h">
+      <Filter>Classes\TownHall</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -75,6 +75,9 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
     </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -110,10 +113,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CITY.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="IRON.cpp" />
+    <ClCompile Include="RESOURCES.cpp" />
+    <ClCompile Include="STONE.cpp" />
+    <ClCompile Include="TownHall.cpp" />
+    <ClCompile Include="TRADE.cpp" />
+    <ClCompile Include="WOOD.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="all_includes.h" />
+    <ClInclude Include="all_infos.h" />
+    <ClInclude Include="all_objects.h" />
+    <ClInclude Include="CITY.h" />
+    <ClInclude Include="Enums.h" />
+    <ClInclude Include="IRON.h" />
+    <ClInclude Include="RESOURCES.h" />
+    <ClInclude Include="STONE.h" />
+    <ClInclude Include="TownHall.h" />
+    <ClInclude Include="TRADE.h" />
+    <ClInclude Include="WOOD.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
