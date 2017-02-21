@@ -1,0 +1,4 @@
+﻿  Book.cpp
+c:\users\home application\desktop\devc 연습 폴더(검사 예외)\c++ 연습\연습 폴더\연습 폴더\book.cpp(36): error C4716: 'Providence_HanSeungMin_2017_02_21::Book::GetTitle': 값을 반환해야 합니다.
+c:\users\home application\desktop\devc 연습 폴더(검사 예외)\c++ 연습\연습 폴더\연습 폴더\book.cpp(42): error C4716: 'Providence_HanSeungMin_2017_02_21::Book::GetPrice': 값을 반환해야 합니다.
+c:\users\home application\desktop\devc 연습 폴더(검사 예외)\c++ 연습\연습 폴더\연습 폴더\book.cpp(39): error C4716: 'Providence_HanSeungMin_2017_02_21::Book::GetIsbn': 값을 반환해야 합니다.
