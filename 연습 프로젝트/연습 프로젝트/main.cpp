@@ -10,10 +10,7 @@ void main(void)
 	int iInput;
 	bool key = true;
 
-	//BANK* ptr = new BANK;
-	//BANK &HansBank = *ptr;
-
-	BANK HansBank;
+	BANK* ptr = new BANK;
 
 	enum
 	{
@@ -42,19 +39,19 @@ void main(void)
 		switch (iInput)
 		{
 		case create:
-			HansBank.CreateList();
+			HANDLER::itSelf()->AddAccountToList(*ptr);
 			break;
 
 		case deposit:
-			HansBank.Deposit();
+			HANDLER::itSelf()->Deposit(*ptr);
 			break;
 
 		case withdraw:
-			HansBank.Withdraw();
+			HANDLER::itSelf()->Withdraw(*ptr);
 			break;
 
 		case total:
-			HansBank.ShowList();
+			HANDLER::itSelf()->ShowInfo(*ptr);
 			break;
 
 		default:
@@ -63,10 +60,7 @@ void main(void)
 		}
 	}
 
-	//은행 정보 복사
-	BANK AnotherBank = HansBank;
-
 	//클래스 객체 해제(delete는 힙영역의 공간을 지우는 키워드. 다른 영역에 못쓴다.)
-	//delete &AnotherBank;
-	//delete &HansBank;
+	delete ptr;
+	delete HANDLER::itSelf();
 }

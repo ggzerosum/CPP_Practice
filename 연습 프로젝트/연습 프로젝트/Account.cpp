@@ -10,7 +10,7 @@ namespace My_NameSpace
 	}
 
 	//생성자
-	ACCOUNT::ACCOUNT(int id, char* name, int cash)
+	ACCOUNT::ACCOUNT(int id, const char* name, int cash)
 		:id(id), cash(cash)
 	{
 		//텍스트 크기만큼 동적할당 및 텍스트 복사

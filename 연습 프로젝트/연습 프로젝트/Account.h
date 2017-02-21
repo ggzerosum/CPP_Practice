@@ -11,7 +11,7 @@ namespace My_NameSpace
 	public:
 		//생성자
 		ACCOUNT(void);
-		ACCOUNT(int id, char* name = NULL, int cash = 0);
+		ACCOUNT(int id, const char* name = NULL, int cash = 0);
 		//복사 생성자
 		ACCOUNT(const ACCOUNT &original);
 		//소멸자

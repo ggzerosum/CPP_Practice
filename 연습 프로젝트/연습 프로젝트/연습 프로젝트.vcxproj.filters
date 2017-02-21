@@ -22,6 +22,12 @@
     <Filter Include="클래스\2. Bank">
       <UniqueIdentifier>{e4ffb96e-0c0d-4f3d-92ce-c26fdf055fbc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="클래스\3. Handler">
+      <UniqueIdentifier>{9381f213-f613-42f3-9e9e-126ef684287d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="클래스\4. Common">
+      <UniqueIdentifier>{b48773e8-10ae-4082-8110-a38d4ad36ab1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -33,6 +39,12 @@
     <ClCompile Include="Bank.cpp">
       <Filter>클래스\2. Bank</Filter>
     </ClCompile>
+    <ClCompile Include="Handler.cpp">
+      <Filter>클래스\3. Handler</Filter>
+    </ClCompile>
+    <ClCompile Include="Common.cpp">
+      <Filter>클래스\4. Common</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="headers.h">
@@ -43,6 +55,15 @@
     </ClInclude>
     <ClInclude Include="Account.h">
       <Filter>클래스\1. Account</Filter>
+    </ClInclude>
+    <ClInclude Include="Handler.h">
+      <Filter>클래스\3. Handler</Filter>
+    </ClInclude>
+    <ClInclude Include="enums.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Common.h">
+      <Filter>클래스\4. Common</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -2,12 +2,13 @@
 
 namespace My_NameSpace
 {
+	namespace ns = My_EnumSpace;
+
 	class BANK
 	{
 	private:
 		int m_iSize;
 		ACCOUNT** m_List;
-		void fnc_flush(void);
 	public:
 		//持失切
 		BANK(void);
@@ -15,10 +16,11 @@ namespace My_NameSpace
 		BANK(const BANK &original);
 		//社瑚切
 		~BANK(void);
-
-		void CreateList(void);
-		void Deposit(void);
-		void Withdraw(void);
+	public:
+		void CreateList(int id, const char* name, int cash);
+		int Deposit(int id, int cash);
+		int Withdraw(int id, int cash);
 		void ShowList(void);
+		int GetCashOfAccount(int id);
 	};
 }
