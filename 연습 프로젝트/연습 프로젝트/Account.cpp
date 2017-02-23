@@ -1,69 +1,49 @@
 #include "headers.h"
+#include "Account.h"
 
 namespace My_NameSpace
 {
-	//생성자
 	ACCOUNT::ACCOUNT(void)
-		:id(0), name(NULL), cash(0)
-	{
-		//empty
-	}
+		:id(0), name(nullptr), cash(0)
+	{}
 
-	//생성자
 	ACCOUNT::ACCOUNT(int id, const char* name, int cash)
 		:id(id), cash(cash)
 	{
-		//텍스트 크기만큼 동적할당 및 텍스트 복사
-		size_t len = strlen(name) + 1;
-		this->name = new char[len];
-		strcpy_s(this->name, len, name);
+		StrToDes(this->name, name);
 	}
 
-	//복사 생성자
-	ACCOUNT::ACCOUNT(const ACCOUNT &original)
-		:id(original.id), cash(original.cash)
+	ACCOUNT::ACCOUNT(const ACCOUNT &origin)
+		:id(origin.id), cash(origin.cash)
 	{
-		char* origin = original.name;
-		size_t size = strlen(origin) + 1;
-		this->name = new char[size];
-		strcpy_s(this->name, size, origin);
+		StrToDes(name, origin.name);
 	}
 
-	//소멸자
 	ACCOUNT::~ACCOUNT(void)
 	{
-		if (name != NULL)
+		if (name != nullptr)
 		{
 			delete[] name;
 		}
 	}
 
-	int ACCOUNT::GetID(void)
+	int ACCOUNT::GetID(void) const
 	{
 		return id;
 	}
 
-	char* ACCOUNT::GetName(void)
+	const char* ACCOUNT::GetName(void) const
 	{
 		return name;
 	}
 
-	int ACCOUNT::GetCash(void)
+	int ACCOUNT::GetCash(void) const
 	{
 		return cash;
 	}
 
-	void ACCOUNT::AddCash(int money)
+	void ACCOUNT::SetCash(int amount)
 	{
-		this->cash += money;
-	}
-
-	bool ACCOUNT::MinusCash(int money)
-	{
-		if (this->cash < money)
-			return false;
-
-		this->cash -= money;
-		return true;
+		cash = amount;
 	}
 }

@@ -30,6 +30,9 @@
     <ClCompile Include="Book.cpp">
       <Filter>클래스\Book</Filter>
     </ClCompile>
+    <ClCompile Include="eBook.cpp">
+      <Filter>클래스\eBook</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Inlcudes.h">
@@ -37,6 +40,9 @@
     </ClInclude>
     <ClInclude Include="Book.h">
       <Filter>클래스\Book</Filter>
+    </ClInclude>
+    <ClInclude Include="eBook.h">
+      <Filter>클래스\eBook</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

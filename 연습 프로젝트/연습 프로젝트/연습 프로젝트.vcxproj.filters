@@ -22,10 +22,13 @@
     <Filter Include="클래스\2. Bank">
       <UniqueIdentifier>{e4ffb96e-0c0d-4f3d-92ce-c26fdf055fbc}</UniqueIdentifier>
     </Filter>
-    <Filter Include="클래스\3. Handler">
-      <UniqueIdentifier>{9381f213-f613-42f3-9e9e-126ef684287d}</UniqueIdentifier>
+    <Filter Include="클래스\1. Account\NormalAccount">
+      <UniqueIdentifier>{f0b0f413-7d62-4e4d-a396-3ae35aa0ea9f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="클래스\4. Common">
+    <Filter Include="클래스\1. Account\HighCreditAccount">
+      <UniqueIdentifier>{b05b103b-f2d4-476e-b28d-403112fc5d41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="클래스\3. Common">
       <UniqueIdentifier>{b48773e8-10ae-4082-8110-a38d4ad36ab1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -39,11 +42,14 @@
     <ClCompile Include="Bank.cpp">
       <Filter>클래스\2. Bank</Filter>
     </ClCompile>
-    <ClCompile Include="Handler.cpp">
-      <Filter>클래스\3. Handler</Filter>
-    </ClCompile>
     <ClCompile Include="Common.cpp">
-      <Filter>클래스\4. Common</Filter>
+      <Filter>클래스\3. Common</Filter>
+    </ClCompile>
+    <ClCompile Include="HighCreditAccount.cpp">
+      <Filter>클래스\1. Account\HighCreditAccount</Filter>
+    </ClCompile>
+    <ClCompile Include="NormalAccount.cpp">
+      <Filter>클래스\1. Account\NormalAccount</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -56,14 +62,20 @@
     <ClInclude Include="Account.h">
       <Filter>클래스\1. Account</Filter>
     </ClInclude>
-    <ClInclude Include="Handler.h">
-      <Filter>클래스\3. Handler</Filter>
-    </ClInclude>
     <ClInclude Include="enums.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="Common.h">
-      <Filter>클래스\4. Common</Filter>
+      <Filter>클래스\3. Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Classes.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="HighCreditAccount.h">
+      <Filter>클래스\1. Account\HighCreditAccount</Filter>
+    </ClInclude>
+    <ClInclude Include="NormalAccount.h">
+      <Filter>클래스\1. Account\NormalAccount</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

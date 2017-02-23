@@ -6,5 +6,6 @@ namespace My_NameSpace
 	{
 	protected:
 		void fnc_flush(void);
+		void StrToDes(char* &destination, const char* source);
 	};
 }

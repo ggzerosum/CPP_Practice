@@ -1,14 +1,17 @@
 #pragma once
+#include "Account.h"
 
 namespace My_NameSpace
 {
 	namespace ns = My_EnumSpace;
 
-	class BANK
+	class BANK : public COMMON
 	{
 	private:
+		static BANK* ptr;
 		int m_iSize;
 		ACCOUNT** m_List;
+
 	public:
 		//持失切
 		BANK(void);
@@ -16,11 +19,17 @@ namespace My_NameSpace
 		BANK(const BANK &original);
 		//社瑚切
 		~BANK(void);
+
 	public:
-		void CreateList(int id, const char* name, int cash);
-		int Deposit(int id, int cash);
-		int Withdraw(int id, int cash);
+		void ShowMenu(void);
+		void CreateList(void);
+		void Deposit(void);
+		void Withdraw(void);
 		void ShowList(void);
-		int GetCashOfAccount(int id);
+		static BANK* itSelf(void);
+
+	protected:
+		ACCOUNT* MakeNormalAccountObj(void);
+		ACCOUNT* MakeHighCreditAccountObj(void);
 	};
 }

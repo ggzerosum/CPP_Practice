@@ -15,11 +15,11 @@ namespace My_NameSpace
 		Book(const char* title, const char* isbn, int price);
 		Book(const Book &copy);
 
-		void SetTitle(void);
-		void SetIsbn(void);
-		void SetPrice(void);
-		char* GetTitle(void) const;
-		char* GetIsbn(void) const;
+		void SetTitle(const char* str);
+		void SetIsbn(const char* str);
+		void SetPrice(int amount);
+		const char* GetTitle(void) const;
+		const char* GetIsbn(void) const;
 		int GetPrice(void) const;
 		void ShowBookInfo(void) const;
 

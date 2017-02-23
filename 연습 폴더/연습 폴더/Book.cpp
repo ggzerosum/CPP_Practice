@@ -14,7 +14,18 @@ namespace My_NameSpace
 	}
 
 	Book::Book(const Book &copy)
-	{}
+		:price(copy.price)
+	{
+		if (copy.title == NULL)
+			title = NULL;
+		else
+			SetStrToDestination(title, copy.title);
+		
+		if (copy.isbn == NULL)
+			isbn = NULL;
+		else
+			SetStrToDestination(isbn, copy.isbn);
+	}
 
 	void Book::SetStrToDestination(char* &destination, const char* source)
 	{
@@ -23,29 +34,52 @@ namespace My_NameSpace
 		strcpy_s(destination, size, source);
 	}
 
-	void Book::SetTitle(void)
-	{}
+	void Book::SetTitle(const char* str)
+	{
+		SetStrToDestination(title, str);
+	}
 
-	void Book::SetIsbn(void)
-	{}
+	void Book::SetIsbn(const char* str)
+	{
+		SetStrToDestination(isbn, str);
+	}
 
-	void Book::SetPrice(void)
-	{}
+	void Book::SetPrice(int amount)
+	{
+		price = amount;
+	}
 
-	char* Book::GetTitle(void) const
-	{}
+	const char* Book::GetTitle(void) const
+	{
+		return title;
+	}
 
-	char* Book::GetIsbn(void) const
-	{}
+	const char* Book::GetIsbn(void) const
+	{
+		return isbn;
+	
+	}
 
 	int Book::GetPrice(void) const
-	{}
+	{
+		return price;
+	}
 
 	void Book::ShowBookInfo(void) const
-	{}
+	{
+		cout << "[도서 정보]" << endl;
+		cout << "제목: " << title << endl;
+		cout << "번호: " << isbn << endl;
+		cout << "가격: " << price << endl;
+	}
 
 	Book::~Book()
 	{
+		if (title != NULL)
+			delete[] title;
+
+		if (isbn != NULL)
+			delete[] isbn;
 	}
 }
 

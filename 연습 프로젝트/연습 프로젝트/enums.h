@@ -2,10 +2,16 @@
 
 namespace My_EnumSpace
 {
-	enum ERROR_CODE
+	enum
 	{
-		SUCCESS	= 0,
-		ID		= 1,
-		CASH	= 2
+		Grade_A = 1,
+		Grade_B = 2,
+		Grade_C = 3,
+	};
+
+	enum
+	{
+		NORMAL	= 1,
+		SPECIAL	= 2,
 	};
 }
