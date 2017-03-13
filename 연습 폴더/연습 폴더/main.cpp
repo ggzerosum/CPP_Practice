@@ -10,6 +10,6 @@ int main(void)
 	ns::eBook my_ebook("µ¿»ê1", "PROVI-200", 12000, "DRM-001");
 	my_ebook.ShowEBookInfo();
 
-	my_ebook.SetIsbn("PROVI-770");
-	my_ebook.ShowEBookInfo();
+	ns::Book my_book2 = my_ebook;
+	my_book2.ShowBookInfo();
 }

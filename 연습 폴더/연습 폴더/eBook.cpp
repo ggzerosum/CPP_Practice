@@ -18,6 +18,20 @@ namespace My_NameSpace
 		SetStrToDestination(DRMKey, copy.DRMKey);
 	}
 
+	//대입 연산자 오버로딩
+	eBook& eBook::operator=(const eBook &ref)
+	{
+		//동적 할당 해제
+		if (DRMKey != nullptr)
+			delete[] DRMKey;
+
+		//멤버 복사
+		Book::operator=(ref);
+		SetStrToDestination(DRMKey, ref.DRMKey);
+
+		return *this;
+	}
+
 	void eBook::SetKey(const char* str)
 	{
 		SetStrToDestination(DRMKey, str);

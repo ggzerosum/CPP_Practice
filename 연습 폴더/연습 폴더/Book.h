@@ -14,6 +14,9 @@ namespace My_NameSpace
 		Book(void);
 		Book(const char* title, const char* isbn, int price);
 		Book(const Book &copy);
+		
+		//대입 연산자
+		Book& operator=(const Book &copy);
 
 		void SetTitle(const char* str);
 		void SetIsbn(const char* str);

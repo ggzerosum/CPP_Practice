@@ -34,6 +34,29 @@ namespace My_NameSpace
 		strcpy_s(destination, size, source);
 	}
 
+	//대입 연산자 오버로딩
+	Book& Book::operator=(const Book &copy)
+	{
+		//메모리 할당 해제1
+		if (title != nullptr)
+			delete[] title;
+
+		//메모리 할당 해제2
+		if (isbn != nullptr)
+			delete[] isbn;
+
+		//Price 변경
+		price = copy.price;
+
+		//동적 할당1
+		SetStrToDestination(title, copy.title);
+
+		//동적 할당2
+		SetStrToDestination(isbn, copy.isbn);
+
+		return *this;
+	}
+
 	void Book::SetTitle(const char* str)
 	{
 		SetStrToDestination(title, str);
