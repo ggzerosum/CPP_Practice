@@ -10,6 +10,10 @@ namespace My_NameSpace
 		ACCOUNT(void);
 		ACCOUNT(int id, const char* name, int cash);
 		ACCOUNT(const ACCOUNT &origin);
+		
+		//대입 연산자(Assignment operator)
+		ACCOUNT& operator=(const ACCOUNT &ref);
+
 		virtual ~ACCOUNT(void);
 	private:
 		int id;

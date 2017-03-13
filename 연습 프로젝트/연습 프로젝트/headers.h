@@ -2,10 +2,9 @@
 
 #include <iostream>
 #include <cstring>
+#include <cstdlib>
 
-#define My_NameSpace hana_bank
-#define My_EnumSpace EnumSpace
-
+#include "defines.h"
 #include "enums.h"
 
 using namespace std;

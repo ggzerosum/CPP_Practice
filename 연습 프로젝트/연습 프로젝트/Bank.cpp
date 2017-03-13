@@ -9,32 +9,26 @@ namespace My_NameSpace
 
 	//생성자
 	BANK::BANK(void)
-		:m_iSize(0), m_List(nullptr)
+		:m_iSize(0), m_List()
 	{
 		//empty
 	}
 
-	//복사 생성자
+	//복사 생성자(Private으로 선언. 금지.)
 	BANK::BANK(const BANK &original)
-		:m_iSize(original.m_iSize)
 	{
-		m_List = new ACCOUNT*[m_iSize];
+		//empty
+	}
 
-		for (int i = 0; i < m_iSize; i++)
-		{
-			m_List[i] = original.m_List[i]->MakeSelfCopiedObj();
-		}
+	//대입 연산자 금지
+	void BANK::operator=(const BANK &origin)
+	{
+		//empty
 	}
 
 	//소멸자
 	BANK::~BANK(void)
 	{
-		for (int i = 0; i < m_iSize; i++)
-		{
-			delete m_List[i];
-		}
-
-		delete[] m_List;
 	}
 
 
@@ -55,7 +49,6 @@ namespace My_NameSpace
 
 		int check;
 		ACCOUNT* ptr;
-		ACCOUNT** pTemp;
 
 		cout << endl << "0. 어떤 계좌를 개설하시겠습니까?";
 		cout << endl << "(1번: 보통 계좌, 2번: 우대 계좌)" << endl << ": ";
@@ -74,36 +67,9 @@ namespace My_NameSpace
 			break;
 		}
 
-		if (m_List == nullptr)
-		{
-			//0에 1 더한 크기로 동적 할당(객체 포인터 변수)
-			m_iSize++;
-			m_List = new ACCOUNT*[m_iSize];
-			
-			//포인터 변수에 고객 객체 주소값 대입
-			*m_List = ptr;
-		}
-		else
-		{
-			//기존에 1 더해진 크기로 동적 할당
-			pTemp = new ACCOUNT*[m_iSize + 1];
-
-			//신규 포인터 배열에 기존 배열의 값 복사
-			for (int i = 0; i < m_iSize; i++)
-			{
-				pTemp[i] = m_List[i];
-			}
-
-			//신규 포인터 배열의 마지막 요소 관리
-			pTemp[m_iSize] = ptr;
-
-			//기존 동적 할당 해제
-			delete[] m_List;
-
-			//주소값 대입, 크기 증가
-			m_List = pTemp;
-			m_iSize++;
-		}
+		//스마트 배열을 통해 알아서 동적 할당 및 확장.
+		if (m_List.add(ptr))
+			++m_iSize;
 	}
 
 	void BANK::Deposit(void)

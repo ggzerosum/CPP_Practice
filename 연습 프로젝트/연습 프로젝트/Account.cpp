@@ -19,6 +19,22 @@ namespace My_NameSpace
 		StrToDes(name, origin.name);
 	}
 
+	//대입 연산자
+	ACCOUNT& ACCOUNT::operator=(const ACCOUNT &ref)
+	{
+		//기존 이름 삭제
+		delete[] name;
+
+		//깊은 복사
+		//이름
+		StrToDes(name, ref.name);
+		//기타
+		id = ref.id;
+		cash = ref.cash;
+
+		return *this;
+	}
+
 	ACCOUNT::~ACCOUNT(void)
 	{
 		if (name != nullptr)
