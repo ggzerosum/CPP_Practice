@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Common.h"
+#include "String.h"
 
 namespace My_NameSpace
 {
@@ -15,13 +16,15 @@ namespace My_NameSpace
 		ACCOUNT& operator=(const ACCOUNT &ref);
 
 		virtual ~ACCOUNT(void);
+
 	private:
 		int id;
-		char* name;
+		String name;
 		int cash;
+
 	public:
 		int GetID(void) const;
-		const char* GetName(void) const;
+		String GetName(void) const;
 		int GetCash(void) const;
 		void SetCash(int amount);
 		virtual void Deposit(int amount) = 0;

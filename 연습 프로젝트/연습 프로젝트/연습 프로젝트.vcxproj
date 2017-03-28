@@ -120,7 +120,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Common.cpp" />
     <ClCompile Include="NormalAccount.cpp" />
-    <ClCompile Include="SmartArr.cpp" />
+    <ClCompile Include="String.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Account.h" />
@@ -133,6 +133,7 @@
     <ClInclude Include="HighCreditAccount.h" />
     <ClInclude Include="NormalAccount.h" />
     <ClInclude Include="SmartArr.h" />
+    <ClInclude Include="String.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

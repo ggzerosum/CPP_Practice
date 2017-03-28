@@ -34,6 +34,9 @@
     <Filter Include="클래스\4. Common">
       <UniqueIdentifier>{b48773e8-10ae-4082-8110-a38d4ad36ab1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="클래스\5. String">
+      <UniqueIdentifier>{3004c412-07e9-46a7-91b4-ae728d53f8ab}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -54,8 +57,8 @@
     <ClCompile Include="NormalAccount.cpp">
       <Filter>클래스\1. Account\NormalAccount</Filter>
     </ClCompile>
-    <ClCompile Include="SmartArr.cpp">
-      <Filter>클래스\3. SmartArr</Filter>
+    <ClCompile Include="String.cpp">
+      <Filter>클래스\5. String</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -88,6 +91,9 @@
     </ClInclude>
     <ClInclude Include="SmartArr.h">
       <Filter>클래스\3. SmartArr</Filter>
+    </ClInclude>
+    <ClInclude Include="String.h">
+      <Filter>클래스\5. String</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

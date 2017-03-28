@@ -10,7 +10,7 @@ namespace My_NameSpace
 	{
 	private:
 		static BANK* ptr;
-		SmartArr m_List;
+		SmartArr<ACCOUNT> m_List;
 		int m_iSize;
 
 		//복사 생성자 금지
